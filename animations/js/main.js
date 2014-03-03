@@ -20,4 +20,15 @@ $(function() {
       e.preventDefault();
     }
   });
+
+  var timeout;
+
+  $("#journal").mousemove(function (e) {
+    $(".page-date").fadeIn();
+
+    clearTimeout(timeout);
+    timeout = setTimeout(function() {
+      $(".page-date:visible").fadeOut();
+    }, 500);
+  });
 });
