@@ -95,18 +95,67 @@ html, body, #journal, .page {
     z-index: 101;
 }
 
-.page-date {
-    width: 200px;
-    position: absolute;
-    left: 50%;
-    margin-left: -100px;
+
+/* ===== Utility Classes ====== */
+.ui-transparent {
     background-color: rgba(0,0,0,0.35);
     color: #eee;
     border-radius: 5px;
     padding: 10px 15px;
     text-align: center;
     font-weight: bold;
+}
+
+.date-browser {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    margin-left: -20px;
+    margin-right: -20px;
+    height: 73px;
+    /*background-color: red;*/
+}
+
+.date-browser ul.date-list {
+    list-style-type: none;
     display: none;
+}
+
+.date-browser ul li {
+    padding: 0;
+    display: inline-block;
+    border-bottom: 4px solid rgba(0,0,0,0.35);
+    margin-left: -4px;
+}
+
+.date-browser ul li.first {
+    margin-left: 233px;
+}
+
+.date-browser ul li .page-date-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #9A9A9A;
+    border-radius: 6px;
+    margin-left: 25px;
+    margin-top: 30px;
+    margin-bottom: -8px;
+}
+
+.page-date-hover {
+    position: absolute;
+    top: 80px;
+    margin-left: -40px;
+    display: none;
+}
+
+.page-date {
+    top: 30px;
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;     
+    /*display: none;*/
 }
 
 .page-link {

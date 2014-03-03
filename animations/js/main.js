@@ -21,6 +21,18 @@ $(function() {
     }
   });
 
+  $(".page-date-dot").on('mouseover', function() {
+    $(this).siblings(".page-date-hover").fadeIn(200);
+  });
+
+  $(".page-date-dot").on('mouseout', function() {
+    $(this).siblings(".page-date-hover").fadeOut(100);
+  });
+
+  $(".page-date").on('mouseover', function() {
+    $(this).siblings(".date-list").fadeIn(200);
+  });
+
   var timeout;
 
   $("#journal").mousemove(function (e) {
@@ -28,7 +40,10 @@ $(function() {
 
     clearTimeout(timeout);
     timeout = setTimeout(function() {
-      $(".page-date:visible").fadeOut();
+      if ($(".date-browser:hover").length == 0) {
+        $(".page-date:visible").fadeOut();
+        $(".page-date").siblings(".date-list").fadeOut();
+      }
     }, 500);
   });
 });
