@@ -106,6 +106,7 @@ html, body, #journal, .page {
     padding: 10px 15px;
     text-align: center;
     font-weight: bold;
+    display: none;
 }
 
 .page-link {
